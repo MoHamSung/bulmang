@@ -23,7 +23,6 @@ struct ChulsseugMainView: View {
             
             VStack(spacing: 0){
                 
-                
                 HeaderView()
                 
                 
