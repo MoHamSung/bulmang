@@ -24,7 +24,7 @@ struct ChulsseugMainView: View {
             VStack(spacing: 0){
                 
                 HeaderView()
-                \
+                
                 customText()
                 
                 Flashcard(front: {CardFrontView()}, back: {CardBackView()})
