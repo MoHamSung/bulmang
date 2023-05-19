@@ -24,7 +24,7 @@ struct ChulsseugMainView: View {
             VStack(spacing: 0){
                 
                 HeaderView()
-                
+
                 customText()
                 
                 Flashcard(front: {CardFrontView()}, back: {CardBackView()})
@@ -36,7 +36,6 @@ struct ChulsseugMainView: View {
             .padding(.horizontal,25)
         }
     }
-    
     @ViewBuilder
     func customText() -> some View{
             
