@@ -33,7 +33,6 @@ struct ChulsseugMainView: View {
                 ButtonView(buttonText: $buttonText)
                 
             }
-            
             .padding(.horizontal,25)
         }
     }
