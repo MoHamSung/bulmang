@@ -9,7 +9,7 @@
 
 개발 화면
 
-<img src= https://github.com/MoHamSung/bulmang/assets/114594496/589ba892-34f6-4f73-a499-a4d9ae60827f width="294" height="640"/>
+<img src= https://github.com/MoHamSung/bulmang/assets/114594496/71ba3100-1e6f-44cf-a19c-06aca1354b30 width="294" height="640"/>
 
 
 ### 피그마로 받은 UI 디자인
