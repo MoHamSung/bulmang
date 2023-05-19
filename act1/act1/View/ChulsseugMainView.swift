@@ -25,7 +25,6 @@ struct ChulsseugMainView: View {
                 
                 HeaderView()
                 
-                
                 customText()
                 
                 Flashcard(front: {CardFrontView()}, back: {CardBackView()})
