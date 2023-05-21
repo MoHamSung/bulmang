@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07350CCD2A1A2B6200C64A78 /* AppleStoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07350CCC2A1A2B6200C64A78 /* AppleStoreHeaderView.swift */; };
+		07350CCF2A1A2B8200C64A78 /* AppleStoreSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07350CCE2A1A2B8200C64A78 /* AppleStoreSliderView.swift */; };
+		07350CD12A1A614B00C64A78 /* AppleStoreImagePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07350CD02A1A614B00C64A78 /* AppleStoreImagePageView.swift */; };
+		07350CD32A1A655600C64A78 /* AppleStoreBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07350CD22A1A655600C64A78 /* AppleStoreBottomView.swift */; };
+		07350CD52A1A679100C64A78 /* AppleStoreSwipeProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07350CD42A1A679100C64A78 /* AppleStoreSwipeProductView.swift */; };
 		0760348B2A19E25C00E2754E /* AppleStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760348A2A19E25C00E2754E /* AppleStoreApp.swift */; };
 		0760348D2A19E25C00E2754E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760348C2A19E25C00E2754E /* ContentView.swift */; };
 		0760348F2A19E25D00E2754E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0760348E2A19E25D00E2754E /* Assets.xcassets */; };
@@ -14,6 +19,8 @@
 		0760349D2A19E25D00E2754E /* AppleStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760349C2A19E25D00E2754E /* AppleStoreTests.swift */; };
 		076034A72A19E25D00E2754E /* AppleStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076034A62A19E25D00E2754E /* AppleStoreUITests.swift */; };
 		076034A92A19E25D00E2754E /* AppleStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076034A82A19E25D00E2754E /* AppleStoreUITestsLaunchTests.swift */; };
+		076034B92A19E28600E2754E /* AppleStoreMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076034B62A19E28600E2754E /* AppleStoreMainView.swift */; };
+		076034BA2A19E28600E2754E /* AppleStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076034B82A19E28600E2754E /* AppleStoreModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07350CCC2A1A2B6200C64A78 /* AppleStoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreHeaderView.swift; sourceTree = "<group>"; };
+		07350CCE2A1A2B8200C64A78 /* AppleStoreSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreSliderView.swift; sourceTree = "<group>"; };
+		07350CD02A1A614B00C64A78 /* AppleStoreImagePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreImagePageView.swift; sourceTree = "<group>"; };
+		07350CD22A1A655600C64A78 /* AppleStoreBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreBottomView.swift; sourceTree = "<group>"; };
+		07350CD42A1A679100C64A78 /* AppleStoreSwipeProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreSwipeProductView.swift; sourceTree = "<group>"; };
 		076034872A19E25C00E2754E /* AppleStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0760348A2A19E25C00E2754E /* AppleStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreApp.swift; sourceTree = "<group>"; };
 		0760348C2A19E25C00E2754E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +57,8 @@
 		076034A22A19E25D00E2754E /* AppleStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		076034A62A19E25D00E2754E /* AppleStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreUITests.swift; sourceTree = "<group>"; };
 		076034A82A19E25D00E2754E /* AppleStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		076034B62A19E28600E2754E /* AppleStoreMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleStoreMainView.swift; sourceTree = "<group>"; };
+		076034B82A19E28600E2754E /* AppleStoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleStoreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +109,8 @@
 		076034892A19E25C00E2754E /* AppleStore */ = {
 			isa = PBXGroup;
 			children = (
+				076034B72A19E28600E2754E /* Model */,
+				076034B52A19E28600E2754E /* View */,
 				0760348A2A19E25C00E2754E /* AppleStoreApp.swift */,
 				0760348C2A19E25C00E2754E /* ContentView.swift */,
 				0760348E2A19E25D00E2754E /* Assets.xcassets */,
@@ -127,6 +143,27 @@
 				076034A82A19E25D00E2754E /* AppleStoreUITestsLaunchTests.swift */,
 			);
 			path = AppleStoreUITests;
+			sourceTree = "<group>";
+		};
+		076034B52A19E28600E2754E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				076034B62A19E28600E2754E /* AppleStoreMainView.swift */,
+				07350CCC2A1A2B6200C64A78 /* AppleStoreHeaderView.swift */,
+				07350CCE2A1A2B8200C64A78 /* AppleStoreSliderView.swift */,
+				07350CD02A1A614B00C64A78 /* AppleStoreImagePageView.swift */,
+				07350CD22A1A655600C64A78 /* AppleStoreBottomView.swift */,
+				07350CD42A1A679100C64A78 /* AppleStoreSwipeProductView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		076034B72A19E28600E2754E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				076034B82A19E28600E2754E /* AppleStoreModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07350CD12A1A614B00C64A78 /* AppleStoreImagePageView.swift in Sources */,
+				076034BA2A19E28600E2754E /* AppleStoreModel.swift in Sources */,
+				07350CCD2A1A2B6200C64A78 /* AppleStoreHeaderView.swift in Sources */,
+				07350CCF2A1A2B8200C64A78 /* AppleStoreSliderView.swift in Sources */,
+				07350CD32A1A655600C64A78 /* AppleStoreBottomView.swift in Sources */,
 				0760348D2A19E25C00E2754E /* ContentView.swift in Sources */,
+				07350CD52A1A679100C64A78 /* AppleStoreSwipeProductView.swift in Sources */,
 				0760348B2A19E25C00E2754E /* AppleStoreApp.swift in Sources */,
+				076034B92A19E28600E2754E /* AppleStoreMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
