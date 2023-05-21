@@ -9,86 +9,49 @@ import SwiftUI
 
 struct AppleStoreMainView: View {
     var body: some View {
-        VStack (alignment:.leading,spacing: 0) {
+        NavigationView {
+            ScrollView {
+                    VStack (alignment:.leading,spacing: 0) {
+
+                        TopView
+                            .padding(.horizontal,20)
+                        
+                        AppleStoreSliderView()
+                                        
+                        AppleStoreImagePageView(itemName: "iPhone 14", itemDescription1: "iPhone 14 그리고 큼직한 사이즈의 iPhone 14 Plus. 획기적인", itemDescription2: "도약을 이뤄낸 배터리 성능. 프로급 카메라. 6가지 멋진 컬러.", imageName: "AppleStoreImage1")
+                        
+                        AppleStoreBottomView(price: "₩1,250,000부터")
+                        
+                        AppleStoreImagePageView(itemName: "iPad", itemDescription1: "다양한 일상 작업에 맞는 완전히 새롭고, 컬러풀한 iPad. 새로운", itemDescription2: "iPad를 소개합니다.", imageName: "AppleStoreImage2")
+                        
+                        AppleStoreBottomView(price: "₩1,250,000부터")
+                        
+                        AppleStoreSwipeProductView()
+                    }
+            }
             
-            AppleStoreHeaderView()
-            
-            AppleStoreSliderView()
 
         }
-        .padding(.horizontal,20)
+        
+        
+        
+    }
+    @ViewBuilder private var TopView: some View {
+        
+        AppleStoreHeaderView()
+        
+        Rectangle()
+            .foregroundColor(Color("Divider"))
+            .frame(height: 0.3)
     }
 }
-
-
 
 
 struct AppleStoreMainView_Previews: PreviewProvider {
     static var previews: some View {
-        
             AppleStoreMainView()
     }
 }
 
-
-struct AppleStoreHeaderView: View {
-    var body: some View{
-        HStack(spacing: 0){
-            Text("쇼핑하기")
-                .font(.system(size: 30))
-                .fontWeight(.semibold)
-                .padding(.top,54)
-            Spacer()
-            Image("AppleStoreLogo")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 37, height: 36)
-                .padding(.top, 48)
-        }
-        .frame(height: 100)
-        .padding(.bottom,10)
-        Divider()
-    }
-}
-
-struct AppleStoreSliderView: View {
-
-    var dotAppearance = UIPageControl.appearance()
-    var body: some View {
-    
-        TabView {
-            ForEach(slides) { slide in
-                HStack(alignment: .top,spacing: 0){
-                    Image(systemName: slide.imageName)
-                        .font(.system(size: slide.fontSize))
-                        .padding(.trailing,12)
-                    
-                    VStack(alignment: .leading,spacing:0){
-                        Text(slide.title)
-                            .font(.system(size: 13))
-                            .fontWeight(.bold)
-                            .padding(.bottom,4)
-                            
-                        Text(slide.subTitle)
-                            .font(.system(size: 12))
-                            .fontWeight(.regular)
-                            .padding(.bottom,4)
-                        
-                        Text("더 알아보기")
-                            .foregroundColor(Color("AppleStoreBlueColor"))
-                            .font(.system(size: 12))
-                            .fontWeight(.regular)
-                    }
-                }.padding(.top,20)
-            }
-        }
-        .tabViewStyle(.page)
-        .onAppear {
-            dotAppearance.currentPageIndicatorTintColor = .black
-            dotAppearance.pageIndicatorTintColor = .gray
-        }
-        
-    }
-}
 
 
