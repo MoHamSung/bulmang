@@ -37,9 +37,8 @@ struct AppleStoreSwipeProductView: View {
                 let _ = print("adjustMentWidth = \(adjustMentWidth)")
                 let size = geo.size
 
-                HStack(spacing: 0){
+                HStack(spacing: spacing){
                     ForEach(swipes) { product in
-                        VStack(spacing: 0) {
                             Image(product.imageName)
                                 .resizable()
                                 .scaledToFit()
@@ -62,17 +61,16 @@ struct AppleStoreSwipeProductView: View {
                                     .padding(.leading,20)
                                     .frame(maxWidth: .infinity,alignment: .leading)
                                 }
-                                .padding(.horizontal,20)
-                                .frame(width: geo.size.width)
+                                .frame(width: geo.size.width - trailingSpace)
                                 
 
                         }
-                        .frame(width: geo.size.width - trailingSpace,height: 509)
 
                         let _ = print("secondWidth = \(geo.size.width)")
                     }
-                }
-                .padding(.horizontal,spacing)
+                
+                .padding(.horizontal,20)
+                // 이거 디버그 하는 방법 물어보기
                 .offset(x: (CGFloat(currentIndex) * -width) + (currentIndex != 0 ? adjustMentWidth : 0) + offset)
                 .gesture(
                     DragGesture()
@@ -81,26 +79,29 @@ struct AppleStoreSwipeProductView: View {
                         })
                         .onEnded({ value in
                             
-                            let offsetX = value.translation.width
-                            print("value = \(value)")
-                            print("value.translation = \(value.translation)")
-                            print("value.translation.widthf = \(value.translation.width)")
-                            
-                            let progress = -offsetX / width
-                            print("progress  = \(progress)")
-                            
-                            let roundIndex = progress.rounded()
+                                let offsetX = value.translation.width
+                                print("value = \(value)")
+                                print("value.translation = \(value.translation)")
+                                print("value.translation.widthf = \(value.translation.width)")
+                                
+                                let progress = -offsetX / width
+                                print("progress  = \(progress)")
+                                
+                                let roundIndex = progress.rounded()
 
-                            // setting min...
-                            currentIndex = max(min(currentIndex + Int(roundIndex), swipes.count - 1), 0)
+                                // setting min...
+                                currentIndex = max(min(currentIndex + Int(roundIndex), swipes.count - 1), 0)
+                            
+
 
                         })
                 )
             }
+            .frame(height: 509)
             .animation(.easeInOut, value: offset == 0)
             
 
-        Spacer()
+        
             
         }
     }

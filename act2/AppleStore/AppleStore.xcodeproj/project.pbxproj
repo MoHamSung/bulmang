@@ -21,7 +21,6 @@
 		076034A92A19E25D00E2754E /* AppleStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076034A82A19E25D00E2754E /* AppleStoreUITestsLaunchTests.swift */; };
 		076034B92A19E28600E2754E /* AppleStoreMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076034B62A19E28600E2754E /* AppleStoreMainView.swift */; };
 		076034BA2A19E28600E2754E /* AppleStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076034B82A19E28600E2754E /* AppleStoreModel.swift */; };
-		07EFF7412A1D84F70044674E /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EFF7402A1D84F70044674E /* SnapCarousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +59,6 @@
 		076034A82A19E25D00E2754E /* AppleStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		076034B62A19E28600E2754E /* AppleStoreMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleStoreMainView.swift; sourceTree = "<group>"; };
 		076034B82A19E28600E2754E /* AppleStoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleStoreModel.swift; sourceTree = "<group>"; };
-		07EFF7402A1D84F70044674E /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +154,6 @@
 				07350CD02A1A614B00C64A78 /* AppleStoreImagePageView.swift */,
 				07350CD22A1A655600C64A78 /* AppleStoreBottomView.swift */,
 				07350CD42A1A679100C64A78 /* AppleStoreSwipeProductView.swift */,
-				07EFF7402A1D84F70044674E /* SnapCarousel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,7 +305,6 @@
 				07350CD52A1A679100C64A78 /* AppleStoreSwipeProductView.swift in Sources */,
 				0760348B2A19E25C00E2754E /* AppleStoreApp.swift in Sources */,
 				076034B92A19E28600E2754E /* AppleStoreMainView.swift in Sources */,
-				07EFF7412A1D84F70044674E /* SnapCarousel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
