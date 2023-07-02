@@ -27,19 +27,19 @@ struct MainView: View {
                     
                         ForEach(alarmModel) { item in
                             Button {
-                                isUpdateSheet = true
                                 currentTime = item
                             } label: {
                                 alarmTime(alarm: item)
                             }
                         }
-                        .onDelete { indexSet in
-                            alarmModel.remove(atOffsets: indexSet)
+                        .onDelete { index in
+                            alarmModel.remove(atOffsets: index)
                         }
                         .sheet(item: $currentTime) { item in
-                            UpdateSheetView(isBottomSheet: $isUpdateSheet, alarmModel: $alarmModel, item: item)
+                            UpdateSheetView(alarmModel: $alarmModel, item: item)
                         }
-                        
+                
+                        //  item 값이 변경될때마다 시트가 업데이트 하도록 설정함
                     
                     
                 }
@@ -54,16 +54,15 @@ struct MainView: View {
                     }
                 }
                 .navigationTitle("알람")
-                
-                
+            }
+            .sheet(isPresented: $isBottomSheet) {
+                VStack{
+                    SheetView( isBottomSheet: $isBottomSheet,alarmModel: $alarmModel)
+                }
             }
         }
         
-        .sheet(isPresented: $isBottomSheet) {
-            VStack{
-                SheetView( isBottomSheet: $isBottomSheet,alarmModel: $alarmModel)
-            }
-        }
+        
         .background(Color.blue.edgesIgnoringSafeArea(.all))
     }
     

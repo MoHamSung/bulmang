@@ -14,6 +14,7 @@
 		074BA13B2A300B270069DC68 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BA13A2A300B270069DC68 /* MainView.swift */; };
 		074BA13D2A30263C0069DC68 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BA13C2A30263C0069DC68 /* SheetView.swift */; };
 		074BA1402A305FED0069DC68 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BA13F2A305FED0069DC68 /* AlarmModel.swift */; };
+		07DBCCA92A50137100956F96 /* UpdateSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBCCA82A50137100956F96 /* UpdateSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		074BA13A2A300B270069DC68 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		074BA13C2A30263C0069DC68 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		074BA13F2A305FED0069DC68 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		07DBCCA82A50137100956F96 /* UpdateSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				074BA13A2A300B270069DC68 /* MainView.swift */,
 				074BA13C2A30263C0069DC68 /* SheetView.swift */,
+				07DBCCA82A50137100956F96 /* UpdateSheetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				074BA13B2A300B270069DC68 /* MainView.swift in Sources */,
 				074BA12C2A300AB20069DC68 /* AlarmApp.swift in Sources */,
 				074BA13D2A30263C0069DC68 /* SheetView.swift in Sources */,
+				07DBCCA92A50137100956F96 /* UpdateSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

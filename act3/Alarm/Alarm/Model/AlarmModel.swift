@@ -10,7 +10,7 @@ import Combine
 
 class AlarmModel: Identifiable,ObservableObject {
     
-    let id = UUID()
+    let id : UUID = UUID()
     var time: String
     var amPm: String
     var date: Date
@@ -36,6 +36,8 @@ class AlarmModel: Identifiable,ObservableObject {
     func updateAlarm(date: Date) {
      
         self.date = date
+        
+        alarmActive = true
         
         let formatter = DateFormatter()
         
