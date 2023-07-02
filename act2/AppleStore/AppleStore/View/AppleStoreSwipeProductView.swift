@@ -19,6 +19,12 @@ struct AppleStoreSwipeProductView: View {
     // Gesture값들을 감지하고 업데이트 시켜줌
     @GestureState var offset: CGFloat = 0
     
+    let swipes : [SwipeModel] = [
+        .init(title: "다채롭게 만개한\n어버이날 선물", subTitle: "쉽게 선물 쇼핑하기", imageName: "ImgSwipeProduct01",textColor: Color("ColorFontBlack"),subTextColor: Color("ColorFontBlack")),
+        .init(title: "iPhone 14 Pro\n딥 퍼플", subTitle: "몽환적인 색감, 색다른 경험.", imageName: "ImgSwipeProduct02",textColor: Color("ColorFontWhite"),subTextColor: Color("ColorFontGray")),
+        .init(title: "MacBook Pro 14\n및 16", subTitle: "이거 문구를 발견하고, 톡방에 메세지를\n먼저 보내는 사람은 페페의 선물이!", imageName: "ImgSwipeProduct03",textColor: Color("ColorFontWhite"),subTextColor: Color("ColorFontGray")),
+    ]
+    
     var body: some View {
         
         VStack(spacing: 0){
@@ -37,7 +43,6 @@ struct AppleStoreSwipeProductView: View {
                 let width = geo.size.width - (trailingSpace - spacing)
                 // 두번째 카드 일 때 양 옆 카드의 끝을 똑같이 보여주는 넓이 값
                 let adjustMentWidth = (trailingSpace / 2) - spacing
-                
                 let size = geo.size
                 
                 HStack(spacing: spacing){

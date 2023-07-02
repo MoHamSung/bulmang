@@ -31,12 +31,6 @@ struct AppleStoreMainView: View {
                 
             }
         }
-        
-        
-        
-        
-        
-        
     }
     @ViewBuilder private var TopView: some View {
         
