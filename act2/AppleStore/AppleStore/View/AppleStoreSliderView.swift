@@ -58,7 +58,7 @@ struct AppleStoreSliderView: View {
             }
             .frame(height: 138)
             .tabViewStyle(.page)
-            .onAppear {
+            .onAppear { 
                 indicator.currentPageIndicatorTintColor = .black
                 indicator.pageIndicatorTintColor = .gray
         }
