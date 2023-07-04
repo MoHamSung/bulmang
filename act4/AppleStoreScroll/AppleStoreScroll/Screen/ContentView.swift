@@ -27,7 +27,7 @@ struct ContentView: View {
                         
                         ContentArea()
                         
-                        ProductArea()
+                        productArea()
                             .background{
                                 GeometryReader { GeometryProxy in
                                     Color.clear
@@ -38,7 +38,7 @@ struct ContentView: View {
                                 }
                             }
                         
-                        PurchaseView()
+                        purchaseView()
                             .background{
                                 GeometryReader { GeometryProxy in
                                     Color.clear
@@ -109,6 +109,7 @@ struct ContentView: View {
             .ignoresSafeArea()
         }
     }
+    // MARK: Simple View
     @ViewBuilder
     func purchaseButton() -> some View {
         HStack{
@@ -135,6 +136,62 @@ struct ContentView: View {
         .padding(.horizontal, 20)
         .offset(y: isButtonActive ? -70 : 500)
 //        .offset(y: -70)
+    }
+    
+    @ViewBuilder
+    func productArea() -> some View{
+        VStack(spacing: 10) {
+            
+            Text("iPhone 14 Pro 더 깊이 살펴보기")
+                .fontWeight(.bold)
+                .font(.system(size: 24))
+                .foregroundColor(.black)
+                .padding(.top,60)
+            
+            Button {
+                
+            } label: {
+                Text("apple.com에서 더 알아보기")
+            }
+            .padding(.bottom,60)
+
+        }
+        .frame(maxWidth: .infinity)
+        .background(Color("ColorBgWhite"))
+    }
+    
+    @ViewBuilder
+    func purchaseView() -> some View{
+        VStack(spacing: 20) {
+            Image("ImgProduct01")
+                .resizable()
+                .scaledToFit()
+                .overlay(alignment: .top){
+                    VStack {
+                        Button {
+                            
+                        } label: {
+                            Text("구입하기")
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                                .padding(.vertical,5)
+                                .padding(.horizontal,14)
+                                .background(
+                                    Color("ColorBtnBlue")
+                                )
+                                .cornerRadius(15)
+                        }
+                        
+                        Text("₩ 1,550,000부터")
+                            .foregroundColor(.black)
+                            .font(.system(size: 10))
+                        
+                    }
+                    .offset(y: 441)
+
+                }
+        }
+        .foregroundColor(Color("ColorBgWhite"))
     }
 }
 
