@@ -71,6 +71,7 @@ struct ProductView: View {
                         
                         
                         HStack(spacing: 15) {
+                            
                             Circle()
                                 .fill(Color("ColorBtnDeepPurple"))
                                 .frame(width: 23, height: 23)

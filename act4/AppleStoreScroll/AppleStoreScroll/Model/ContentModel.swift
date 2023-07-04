@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct ContentModel: Identifiable {
+    let id = UUID()
+    let imageName: String
+    let descriptionTitle: String
+    let descriptionSubTitle: String
+}
+struct GradientContentModel: Identifiable {
+    let id = UUID()
+    let imageName: String
+    let descriptionTitle: String
+    let descriptionSubTitle: String
+}
