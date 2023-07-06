@@ -83,6 +83,7 @@ struct ContentView: View {
                         .ignoresSafeArea()
                 )
             }
+            //  "scroll"인 좌표 공간을 생성하고 현재 뷰에 적용하는 것을 의미합니다. 이 좌표 공간은 해당 뷰와 그 하위 뷰에 적용
             .coordinateSpace(name: "scroll")
             // Modifier 위치 정보의 변경 사항을 감지하고, 변경 사항이 발생할 때마다 특정 동작을 수행하는 클로저를 실행
             .onPreferenceChange(OffsetPreferenceKey.self) { value in
