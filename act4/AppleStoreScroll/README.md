@@ -34,7 +34,7 @@
 - 디바이스의 높이를 측정
 - enum, switch 사용하여 색상마다 View를 다르게 그려줌
 
-### Swipe Animation
+### Scroll Animation
 
 ```swift
 .onPreferenceChange(OffsetPreferenceKey.self) { value in
