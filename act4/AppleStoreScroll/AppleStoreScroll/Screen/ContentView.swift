@@ -84,10 +84,12 @@ struct ContentView: View {
                 )
             }
             .coordinateSpace(name: "scroll")
+            // Modifier 위치 정보의 변경 사항을 감지하고, 변경 사항이 발생할 때마다 특정 동작을 수행하는 클로저를 실행
             .onPreferenceChange(OffsetPreferenceKey.self) { value in
                 currentHeight = value
                 print("currentHeight: \(value)")
                 
+                // 현재 디바이스 기기의 높이를 측정하여 내가 원하는 지점에서 Bool값을 바꿔줌
                 if -(currentHeight - UIScreen.main.bounds.height) < (wholeViewHeight - purchaseHeight - footerHeight){
                     withAnimation(.spring(response:0.5,dampingFraction:0.5,blendDuration: 0.5)){
                         isButtonActive = true
@@ -101,7 +103,7 @@ struct ContentView: View {
                 print (wholeViewHeight - productHeight)
             }
             .overlay(alignment:.bottom){
-                withAnimation(.interactiveSpring(response: 0.5,dampingFraction: 0.6,blendDuration: 0.6)) {
+                withAnimation(.interactiveSpring(response: 0.8,dampingFraction: 0.6,blendDuration: 0.6)) {
                     purchaseButton()
                 }
                 
@@ -194,10 +196,12 @@ struct ContentView: View {
         .foregroundColor(Color("ColorBgWhite"))
     }
 }
-
+// 레이아웃 시스템의 뷰의 위치 데이터를 수집
 struct OffsetPreferenceKey: PreferenceKey {
+    // 화면위치의 초기값
     static var defaultValue: CGFloat = 0
     
+    //inout 매개변수를 통해 값을 변경해야함, nextValue를 호출하여 새로운값을 가져와서 업데이트
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
         value = nextValue()
     }
