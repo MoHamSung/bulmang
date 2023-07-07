@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07807F812A57890E002EF080 /* ImgBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07807F802A57890E002EF080 /* ImgBannerModel.swift */; };
+		07807F832A585D8D002EF080 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07807F822A585D8D002EF080 /* HeaderView.swift */; };
 		078A8AA12A5783630058DC05 /* NaverWebtoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A8AA02A5783630058DC05 /* NaverWebtoonApp.swift */; };
 		078A8AA32A5783630058DC05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A8AA22A5783630058DC05 /* ContentView.swift */; };
 		078A8AA52A5783640058DC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078A8AA42A5783640058DC05 /* Assets.xcassets */; };
 		078A8AA82A5783640058DC05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078A8AA72A5783640058DC05 /* Preview Assets.xcassets */; };
+		078A8AB02A5784E70058DC05 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A8AAF2A5784E70058DC05 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07807F802A57890E002EF080 /* ImgBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgBannerModel.swift; sourceTree = "<group>"; };
+		07807F822A585D8D002EF080 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		078A8A9D2A5783630058DC05 /* NaverWebtoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverWebtoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		078A8AA02A5783630058DC05 /* NaverWebtoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverWebtoonApp.swift; sourceTree = "<group>"; };
 		078A8AA22A5783630058DC05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		078A8AA42A5783640058DC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		078A8AA72A5783640058DC05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		078A8AAF2A5784E70058DC05 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07807F7D2A578879002EF080 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07807F802A57890E002EF080 /* ImgBannerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		078A8A942A5783630058DC05 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +65,8 @@
 		078A8A9F2A5783630058DC05 /* NaverWebtoon */ = {
 			isa = PBXGroup;
 			children = (
+				07807F7D2A578879002EF080 /* Model */,
+				078A8AAE2A5784A30058DC05 /* Screens */,
 				078A8AA02A5783630058DC05 /* NaverWebtoonApp.swift */,
 				078A8AA22A5783630058DC05 /* ContentView.swift */,
 				078A8AA42A5783640058DC05 /* Assets.xcassets */,
@@ -65,6 +81,15 @@
 				078A8AA72A5783640058DC05 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		078A8AAE2A5784A30058DC05 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				078A8AAF2A5784E70058DC05 /* MainView.swift */,
+				07807F822A585D8D002EF080 /* HeaderView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07807F832A585D8D002EF080 /* HeaderView.swift in Sources */,
 				078A8AA32A5783630058DC05 /* ContentView.swift in Sources */,
+				078A8AB02A5784E70058DC05 /* MainView.swift in Sources */,
 				078A8AA12A5783630058DC05 /* NaverWebtoonApp.swift in Sources */,
+				07807F812A57890E002EF080 /* ImgBannerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
