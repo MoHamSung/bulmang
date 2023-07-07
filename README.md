@@ -70,3 +70,26 @@
         </tr>
     </tbody>
 </table>
+
+## Lv 4 애플스토어 스크롤
+
+애플스토어 스크롤 
+
+<table>
+    <thead>
+        <tr>
+            <th>실제 어플 구현 모습</th>
+            <th>클론 어플 구현 모습</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <img src= https://github.com/MoHamSung/bulmang/assets/114594496/a7b53ac4-e6fb-403c-8e50-1e1abe40fe64 width="294" height="640"/>
+            </td>
+            <td>  
+              <img src= https://github.com/MoHamSung/bulmang/assets/114594496/bed67441-c048-4ac3-9c53-8df9ee354c6a width="294" height="640"/>
+            </td>
+        </tr>
+    </tbody>
+</table>
