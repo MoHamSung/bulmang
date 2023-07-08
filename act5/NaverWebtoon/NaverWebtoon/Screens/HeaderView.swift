@@ -34,7 +34,6 @@ struct HeaderView: View {
     var body: some View {
         GeometryReader { geo in
             let width = geo.size.width - (totalPadding - trailingPadding)
-            let secondWidth = (totalPadding/2) - trailingPadding
             
             Group{
                 ForEach(0..<images.count) { index in
@@ -66,9 +65,9 @@ struct HeaderView: View {
                     })
                     .onEnded({ value in
                         let offsetX = value.translation.width
-                        var swipe = -offsetX/width
+                        let swipe = -offsetX/width
                         let roundIndex = swipe.rounded()
-                        currentOpacity = swipe
+                        
                         withAnimation(.linear){
                             currentIndex = max(min(currentIndex + Int(roundIndex), imgBannerModel.count - 1),0)
                             
