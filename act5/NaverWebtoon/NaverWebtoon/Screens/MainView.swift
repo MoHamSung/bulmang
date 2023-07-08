@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     //MARK: PROPERTIES
+    @Namespace var animation
     
     var body: some View {
 
@@ -16,6 +17,8 @@ struct MainView: View {
             //MARK: HEADER
             HeaderView()
             
+            //MARK: CENTER
+            CenterView(animation: animation)
         }
     }
 }

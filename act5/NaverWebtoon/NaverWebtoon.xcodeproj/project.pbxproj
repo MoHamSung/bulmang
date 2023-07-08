@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077469F72A59AD3200F65534 /* CenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077469F62A59AD3200F65534 /* CenterView.swift */; };
+		077469F92A59AD5E00F65534 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077469F82A59AD5E00F65534 /* TabModel.swift */; };
+		077469FC2A59B58200F65534 /* ScrollOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077469FB2A59B58200F65534 /* ScrollOffset.swift */; };
+		07746A002A59B9A600F65534 /* LinearInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077469FF2A59B9A600F65534 /* LinearInterpolation.swift */; };
 		07807F812A57890E002EF080 /* ImgBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07807F802A57890E002EF080 /* ImgBannerModel.swift */; };
 		07807F832A585D8D002EF080 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07807F822A585D8D002EF080 /* HeaderView.swift */; };
 		078A8AA12A5783630058DC05 /* NaverWebtoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A8AA02A5783630058DC05 /* NaverWebtoonApp.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		077469F62A59AD3200F65534 /* CenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterView.swift; sourceTree = "<group>"; };
+		077469F82A59AD5E00F65534 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
+		077469FB2A59B58200F65534 /* ScrollOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffset.swift; sourceTree = "<group>"; };
+		077469FF2A59B9A600F65534 /* LinearInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearInterpolation.swift; sourceTree = "<group>"; };
 		07807F802A57890E002EF080 /* ImgBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgBannerModel.swift; sourceTree = "<group>"; };
 		07807F822A585D8D002EF080 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		078A8A9D2A5783630058DC05 /* NaverWebtoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverWebtoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +46,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077469FA2A59B56900F65534 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				077469FB2A59B58200F65534 /* ScrollOffset.swift */,
+				077469FF2A59B9A600F65534 /* LinearInterpolation.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		07807F7D2A578879002EF080 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				07807F802A57890E002EF080 /* ImgBannerModel.swift */,
+				077469F82A59AD5E00F65534 /* TabModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -65,6 +83,7 @@
 		078A8A9F2A5783630058DC05 /* NaverWebtoon */ = {
 			isa = PBXGroup;
 			children = (
+				077469FA2A59B56900F65534 /* ViewModel */,
 				07807F7D2A578879002EF080 /* Model */,
 				078A8AAE2A5784A30058DC05 /* Screens */,
 				078A8AA02A5783630058DC05 /* NaverWebtoonApp.swift */,
@@ -88,6 +107,7 @@
 			children = (
 				078A8AAF2A5784E70058DC05 /* MainView.swift */,
 				07807F822A585D8D002EF080 /* HeaderView.swift */,
+				077469F62A59AD3200F65534 /* CenterView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -163,10 +183,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				07807F832A585D8D002EF080 /* HeaderView.swift in Sources */,
+				077469F72A59AD3200F65534 /* CenterView.swift in Sources */,
 				078A8AA32A5783630058DC05 /* ContentView.swift in Sources */,
+				077469FC2A59B58200F65534 /* ScrollOffset.swift in Sources */,
 				078A8AB02A5784E70058DC05 /* MainView.swift in Sources */,
 				078A8AA12A5783630058DC05 /* NaverWebtoonApp.swift in Sources */,
+				077469F92A59AD5E00F65534 /* TabModel.swift in Sources */,
 				07807F812A57890E002EF080 /* ImgBannerModel.swift in Sources */,
+				07746A002A59B9A600F65534 /* LinearInterpolation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +229,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -265,6 +290,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -292,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NaverWebtoon/Preview Content\"";
@@ -310,6 +337,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Pos.AcademyStudent.Bulmang.NaverWebtoon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NaverWebtoon/Preview Content\"";
@@ -339,6 +368,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Pos.AcademyStudent.Bulmang.NaverWebtoon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
