@@ -2,151 +2,231 @@
 //  CenterView.swift
 //  NaverWebtoon
 //
-//  Created by 하명관 on 2023/07/08.
+//  Created by 하명관 on 2023/07/10.
 //
 
 import SwiftUI
 
-struct CenterView: View {
-    //MARK: Properties
-    @State private var currentTab: TabModel = tab[0]
-    @State private var tabs: [TabModel] = tab
-    @State private var contentOffset: CGFloat = 0
-    @State private var indicatorWidth: CGFloat = 0
-    @State private var indicatorPosition: CGFloat = 0
-    
-    var animation:Namespace.ID
-    
-    var body: some View {
-        // selection 매개변수와 상태 속성인 currentTab 사이의 동기화를 위해 SwiftUI가 View의 내부 상태 변화를 추적해야 하기 때문
-        TabView(selection: $currentTab){
-            ForEach(tabs) { tab in
-                GeometryReader {
-                    let size = $0.size
-                    
-                    Image(tab.tabName)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: size.width, height: size.height)
-                }
-                .clipped()
-                .ignoresSafeArea()
-                .offsetX { rect in
-                    if currentTab.tabName == tab.tabName{
-                        contentOffset = rect.minX - (rect.width * CGFloat(index(of: tab)))
-                    }
-                    updateTabFrame(rect.width)
-                }
-                .tag(tab)
-            }
+extension View {
+    fileprivate func extractButton(_ imageName: String) -> some View {
+        Button(action: {
+            // 버튼을 클릭했을 때 수행할 작업을 여기에 추가하세요
+        }) {
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
         }
-        .tabViewStyle(.page(indexDisplayMode: .never))
-        .ignoresSafeArea()
-        .overlay(alignment:.top, content: {
-            HStack(spacing: 0){
-                ForEach($tabs) { $tab in
-                    Button {
-                        currentTab.tabName = tab.tabName
-                    } label: {
-                        Text(tab.tabName)
-                            .foregroundColor(currentTab.tabName == tab.tabName ? Color("FontGreen") : Color.black )
-                            .fontWeight(.semibold)
-                            // 계산 목적으로 탭의 minx 및 너비 저장
-                            .offsetX { rect in
-                                tab.minX = rect.minX
-                                tab.width = rect.width
-                            }
-//                            .overlay(
-//                                // Adding Matched Geometry Effect...
-//                                ZStack{
-//                                    if currentTab.tabName == tab.tabName{
-//                                        Capsule()
-//                                            .fill(Color("FontGreen"))
-//                                            .matchedGeometryEffect(id: "PRODUCTTAB", in: animation)
-//                                            .frame(width: indicatorWidth,height: 4)
-//                                            .offset(y:10)
-//                                    }
-//                                    else{
-//                                        Capsule()
-//                                            .fill(Color.clear)
-//                                            .frame(width: indicatorWidth,height: 4)
-//                                            .offset(y:10)
-//                                    }
-//                                }
-//                                .padding(.horizontal,-5)
-//
-//                                ,alignment: .bottom
-//                            )
-                    }
-                    if tabs.last != tab {
-                        Spacer(minLength: 0)
-                    }
-                }
-                
-            }
-            .padding([.top,.horizontal] , 15)
-            .overlay(alignment: .bottomLeading) {
-                    Rectangle()
-                        .frame(width: indicatorWidth, height: 4)
-                        .foregroundColor(Color("FontGreen"))
-                        .offset(x: indicatorPosition, y: 10)
-            }
-        })
-    }
-    // 탭 넓이와 위치 계산
-    func updateTabFrame(_ tabViewWidth: CGFloat) {
-        let inputRange = tabs.indices.compactMap { index -> CGFloat? in
-            return CGFloat(index) * tabViewWidth
-        }
-        
-        let outputRangeForeWidth = tabs.compactMap { tab -> CGFloat? in
-            return tab.width
-        }
-        
-        let outputRangeForPosition = tabs.compactMap { tab -> CGFloat? in
-            return tab.minX
-        }
-        
-        let widthInterpolation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForeWidth)
-        
-        let positionInterpolation = LinearInterpolation(inputRange: inputRange, outputRange: outputRangeForPosition)
-        
-        indicatorWidth = widthInterpolation.calculate(for: -contentOffset)
-        indicatorPosition = positionInterpolation.calculate(for: -contentOffset)
-    }
-    
-    func index(of tab: TabModel) -> Int {
-        return tabs.firstIndex(of: tab) ?? 0
-    }
-    
-    @ViewBuilder
-    func TabsView() -> some View{
-        HStack(spacing: 0){
-            ForEach($tabs) { $tab in
-                Text(tab.tabName)
-                    .fontWeight(.semibold)
-                    // 계산 목적으로 탭의 minx 및 너비 저장
-                    .offsetX { rect in
-                        tab.minX = rect.minX
-                        tab.width = rect.width
-                    }
-            
-                if tabs.last != tab {
-                    Spacer(minLength: 0)
-                }
-            }
-        }
-        .padding([.top,.horizontal] , 15)
-        .overlay(alignment: .bottomLeading, content: {
-            Rectangle()
-                .frame(width: indicatorWidth,height: 4)
-                .offset(x: indicatorPosition,y:10)
-        })
     }
 }
 
-//struct CenterView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CenterView()
-//    }
-//}
+struct MondayView: View {
+    let deviceWidth = UIScreen.main.bounds.width
+    
+    let imageNames = [
+        ["ImgContentMon01", "ImgContentMon02", "ImgContentMon03"],
+        ["ImgContentMon04", "ImgContentMon05", "ImgContentMon06"],
+        ["ImgContentMon07", "ImgContentMon08", "ImgContentMon09"],
+        ["ImgContentMon10", "ImgContentMon11", "ImgContentMon12"],
+    ]
+
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(imageNames, id: \.self) { row in
+                HStack(spacing: 6) {
+                    ForEach(row, id: \.self) { imageName in
+                        extractButton(imageName)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .frame(width: deviceWidth)
+    }
+}
+
+struct TuesdayView: View {
+    let deviceWidth = UIScreen.main.bounds.width
+    
+    let imageNames = [
+        ["ImgContentTue01", "ImgContentTue02", "ImgContentTue03"],
+        ["ImgContentTue04", "ImgContentTue05", "ImgContentTue06"],
+        ["ImgContentTue07", "ImgContentTue08", "ImgContentTue09"],
+        ["ImgContentTue10", "ImgContentTue11", "ImgContentTue12"],
+    ]
+
+
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(imageNames, id: \.self) { row in
+                HStack(spacing: 6) {
+                    ForEach(row, id: \.self) { imageName in
+                        extractButton(imageName)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .frame(width: deviceWidth)
+    }
+}
+
+struct WednesdayView: View {
+    
+    let deviceWidth = UIScreen.main.bounds.width
+    let imageNames = [
+        ["ImgContentWed01", "ImgContentWed02", "ImgContentWed03"],
+        ["ImgContentWed04", "ImgContentWed05", "ImgContentWed06"],
+        ["ImgContentWed07", "ImgContentWed08", "ImgContentWed09"],
+        ["ImgContentWed10", "ImgContentWed11", "ImgContentWed12"],
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(imageNames, id: \.self) { row in
+                HStack(spacing: 6) {
+                    ForEach(row, id: \.self) { imageName in
+                        extractButton(imageName)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .frame(width: deviceWidth)
+    }
+}
+
+struct ThursdayView: View {
+    
+    let deviceWidth = UIScreen.main.bounds.width
+    let imageNames = [
+        ["ImgContentThu01", "ImgContentThu02", "ImgContentThu03"],
+        ["ImgContentThu04", "ImgContentThu05", "ImgContentThu06"],
+        ["ImgContentThu07", "ImgContentThu08", "ImgContentThu09"],
+        ["ImgContentThu10", "ImgContentThu11", "ImgContentThu12"],
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(imageNames, id: \.self) { row in
+                HStack(spacing: 6) {
+                    ForEach(row, id: \.self) { imageName in
+                        extractButton(imageName)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .frame(width: deviceWidth)
+    }
+}
+
+struct FridayView: View {
+    let deviceWidth = UIScreen.main.bounds.width
+    
+    let imageNames = [
+        ["ImgContentFri01", "ImgContentFri02", "ImgContentFri03"],
+        ["ImgContentFri04", "ImgContentFri05", "ImgContentFri06"],
+        ["ImgContentFri07", "ImgContentFri08", "ImgContentFri09"],
+        ["ImgContentFri10", "ImgContentFri11", "ImgContentFri12"],
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(imageNames, id: \.self) { row in
+                HStack(spacing: 6) {
+                    ForEach(row, id: \.self) { imageName in
+                        extractButton(imageName)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .frame(width: deviceWidth)
+    }
+}
+
+struct SaturdayView: View {
+    
+    let deviceWidth = UIScreen.main.bounds.width
+    let imageNames = [
+        ["ImgContentSat01", "ImgContentSat02", "ImgContentSat03"],
+        ["ImgContentSat04", "ImgContentSat05", "ImgContentSat06"],
+        ["ImgContentSat07", "ImgContentSat08", "ImgContentSat09"],
+        ["ImgContentSat10", "ImgContentSat11", "ImgContentSat12"],
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(imageNames, id: \.self) { row in
+                HStack(spacing: 6) {
+                    ForEach(row, id: \.self) { imageName in
+                        extractButton(imageName)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .frame(width: deviceWidth)
+    }
+}
+
+struct SundayView: View {
+    
+    let deviceWidth = UIScreen.main.bounds.width
+    let imageNames = [
+        ["ImgContentSun01", "ImgContentSun02", "ImgContentSun03"],
+        ["ImgContentSun04", "ImgContentSun05", "ImgContentSun06"],
+        ["ImgContentSun07", "ImgContentSun08", "ImgContentSun09"],
+        ["ImgContentSun10", "ImgContentSun11", "ImgContentSun12"],
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(imageNames, id: \.self) { row in
+                HStack(spacing: 6) {
+                    ForEach(row, id: \.self) { imageName in
+                        extractButton(imageName)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .frame(width: deviceWidth)
+    }
+}
+
+struct NewdayView: View {
+    
+    let deviceWidth = UIScreen.main.bounds.width
+    let imageNames = [
+        ["ImgContentNew01", "ImgContentNew02", "ImgContentNew03"],
+        ["ImgContentNew04", "ImgContentNew05", "ImgContentNew06"],
+        ["ImgContentNew07", "ImgContentNew08", "ImgContentNew09"],
+        ["ImgContentNew10", "ImgContentNew11", "ImgContentNew12"],
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(imageNames, id: \.self) { row in
+                HStack(spacing: 6) {
+                    ForEach(row, id: \.self) { imageName in
+                        extractButton(imageName)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .frame(width: deviceWidth)
+    }
+}
+
+
+
+
+struct CenterView_Previews: PreviewProvider {
+    static var previews: some View {
+        FridayView()
+    }
+}
