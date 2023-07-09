@@ -32,7 +32,10 @@ struct HeaderView: View {
     @State private var opacity = 1.0
     
     var body: some View {
+        let imageWidth = UIScreen.main.bounds.width
+        let imageHeight = UIScreen.main.bounds.height
         GeometryReader { geo in
+            
             let width = geo.size.width - (totalPadding - trailingPadding)
             
             Group{
@@ -42,7 +45,6 @@ struct HeaderView: View {
                         .scaledToFit()
                         .opacity(index == currentIndex ? 1 : 0)
                 }
-                .ignoresSafeArea()
                 
                 HStack(spacing: trailingPadding) {
                     ForEach(imgBannerModel) { img in
@@ -50,18 +52,16 @@ struct HeaderView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: geo.size.width - totalPadding)
-                            .offset(x: (CGFloat(currentIndex) * -width) + offset)
+                            .offset(x: (CGFloat(currentIndex) * -width) + offset,y: imageHeight/4.1)
                     }
                     .animation(.easeInOut,value: offset == 0)
                 }
-                .offset(y:170)
                 .padding(.horizontal,16)
             }
             .gesture(
                 DragGesture()
                     .updating($offset, body: { value, out, _ in
                         out = value.translation.width
-                        print("out : \(out)")
                     })
                     .onEnded({ value in
                         let offsetX = value.translation.width
@@ -77,6 +77,7 @@ struct HeaderView: View {
                     })
             )
         }
+        .frame(width: imageWidth,height: imageHeight/3.4)
     }
 }
 
