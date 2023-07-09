@@ -10,7 +10,7 @@ import SwiftUI
 extension View {
     fileprivate func extractButton(_ imageName: String) -> some View {
         Button(action: {
-            // 버튼을 클릭했을 때 수행할 작업을 여기에 추가하세요
+            
         }) {
             Image(imageName)
                 .resizable()
@@ -42,6 +42,7 @@ struct MondayView: View {
         }
         .padding(.horizontal, 16)
         .frame(width: deviceWidth)
+        
     }
 }
 
