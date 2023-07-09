@@ -19,17 +19,13 @@ struct CenterViewTab: View {
     
     var body: some View {
         // selection 매개변수와 상태 속성인 currentTab 사이의 동기화를 위해 SwiftUI가 View의 내부 상태 변화를 추적해야 하기 때문
-        ZStack(alignment: .top) {
+        
             VStack {
                 TabView(selection: $currentTab){
                     ForEach(tabs) { tab in
                         GeometryReader { geometry in
-                            let size = geometry.size
-                            
                             getView(for: tab)
                                 .frame(width: deviceWidth)
-                                
-                                
                         }
                         .clipped()
                         .ignoresSafeArea()
@@ -43,23 +39,15 @@ struct CenterViewTab: View {
                     }
                 }
                 .padding(.top, 50)
-                .frame(height: deviceHeight)
+                .frame(height: 700)
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .overlay(alignment: .top, content: {
                     TabsView()
                 })
-                .background {
-                    GeometryReader { geometry in
-                        Color.clear
-                            .onAppear {
-                                print("CenterTabView 높이 : \(geometry.size.height)")
-                            }
-                    }
-                }
                 
-                Spacer()
+                
             }
-        }
+        
     }
     
     func getView(for tab: TabModel) -> some View {
