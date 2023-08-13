@@ -17,9 +17,7 @@ struct AppleStoreSliderView: View {
         .init(title: "Airpod Pro", subTitle: "에어팟 프로를 잃어버렸습니다.\n제발 제 에어팟 프로를 찾아주세요.\n찾아주신 분에겐 ₩20,000 상당의 크레딧이.*", imageName: "airpodspro.chargingcase.wireless",fontSize: 31)
     ]
     
-    var body: some View {
-    
-        
+    var body: some View {    
             TabView {
                 ForEach(slides) { slide in
                     VStack {

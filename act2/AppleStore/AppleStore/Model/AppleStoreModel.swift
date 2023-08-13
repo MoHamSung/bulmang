@@ -13,7 +13,6 @@ struct SlideModel: Identifiable {
     let subTitle: String
     let imageName: String
     let fontSize: Double
-    
 }
 
 

@@ -106,17 +106,21 @@ struct CenterViewTab: View {
     func TabsView() -> some View{
         HStack(spacing: 0){
             ForEach($tabs) { $tab in
-                Text(tab.tabName)
-                    .fontWeight(.semibold)
-                    .foregroundColor(currentTab.tabName == tab.tabName ?  Color("FontGreen"): Color.black)
-                    // 계산 목적으로 탭의 minx 및 너비 저장
-                    .offsetX { rect in
-                        tab.minX = rect.minX
-                        tab.width = rect.width
+                Button {
+                    currentTab.tabName = tab.tabName
+                } label: {
+                    Text(tab.tabName)
+                        .fontWeight(.semibold)
+                        .foregroundColor(currentTab.tabName == tab.tabName ?  Color("FontGreen"): Color.black)
+                        // 계산 목적으로 탭의 minx 및 너비 저장
+                        .offsetX { rect in
+                            tab.minX = rect.minX
+                            tab.width = rect.width
+                        }
+                
+                    if tabs.last != tab {
+                        Spacer(minLength: 0)
                     }
-            
-                if tabs.last != tab {
-                    Spacer(minLength: 0)
                 }
             }
         }

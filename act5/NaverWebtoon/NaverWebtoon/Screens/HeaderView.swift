@@ -5,84 +5,123 @@
 //  Created by 하명관 on 2023/07/07.
 //
 
+//
+//  HeaderArea.swift
+//  act5
+//
+//  Created by YouiHyon Kim on 2023/07/05.
+//
+
 import SwiftUI
 
-struct HeaderView: View {
-    // MARK: Properties
-    @State private var currentIndex = 0
-    @State private var currentOpacity:CGFloat = 0
+struct HeaderArea: View {
+    let spacing: CGFloat = 10
+    let trailingSpace: CGFloat = 32
+    let deviceWidth = UIScreen.main.bounds.width
     
-    @GestureState var offset:CGFloat = 0
+    @GestureState private var dragOffset: CGFloat = 0
     
-    private let trailingPadding:CGFloat = 8
-    private let totalPadding:CGFloat = 32
-    private let images = ["ImgBanner01", "ImgBanner02", "ImgBanner03", "ImgBanner04", "ImgBanner05","ImgBanner06","ImgBanner07","ImgBanner08"]
-    
-    let imgBannerModel: [ImgBannerModel] = [
-        .init(imgBanner: "ImgBanner01", imgLinBanner: "ImgLineBanner01"),
-        .init(imgBanner: "ImgBanner02", imgLinBanner: "ImgLineBanner02"),
-        .init(imgBanner: "ImgBanner03", imgLinBanner: "ImgLineBanner03"),
-        .init(imgBanner: "ImgBanner04", imgLinBanner: "ImgLineBanner04"),
-        .init(imgBanner: "ImgBanner05", imgLinBanner: "ImgLineBanner05"),
-        .init(imgBanner: "ImgBanner06", imgLinBanner: "ImgLineBanner06"),
-        .init(imgBanner: "ImgBanner07", imgLinBanner: "ImgLineBanner07"),
-        .init(imgBanner: "ImgBanner08", imgLinBanner: "ImgLineBanner08")
-    ]
-
-    @State private var opacity = 1.0
-    
-    var body: some View {
-        let imageWidth = UIScreen.main.bounds.width
-        let imageHeight = UIScreen.main.bounds.height
-        GeometryReader { geo in
-            
-            let width = geo.size.width - (totalPadding - trailingPadding)
-            
-            Group{
-                ForEach(0..<images.count) { index in
-                    Image(images[index])
-                        .resizable()
-                        .scaledToFit()
-                        .opacity(index == currentIndex ? 1 : 0)
-                }
+    @State private var headViewHeight: CGRect = .zero
+    @State var currentIndex = 0
+        
+        var body: some View {
+            GeometryReader { geo in
+                let width = geo.size.width - (                        trailingSpace - spacing)
                 
-                HStack(spacing: trailingPadding) {
-                    ForEach(imgBannerModel) { img in
-                        Image(img.imgLinBanner)
+                ZStack(alignment: .bottomLeading) {
+                    ForEach(swipeProducts) { product in
+                        Image(product.backgroundImage)
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: geo.size.width - totalPadding)
-                            .offset(x: (CGFloat(currentIndex) * -width) + offset,y: imageHeight/4.1)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: deviceWidth)
+                            .opacity(getOpactiy(for: product, dragOffset: dragOffset, width: UIScreen.main.bounds.width))
                     }
-                    .animation(.easeInOut,value: offset == 0)
-                }
-                .padding(.horizontal,16)
-            }
-            .gesture(
-                DragGesture()
-                    .updating($offset, body: { value, out, _ in
-                        out = value.translation.width
-                    })
-                    .onEnded({ value in
-                        let offsetX = value.translation.width
-                        let swipe = -offsetX/width
-                        let roundIndex = swipe.rounded()
-                        
-                        withAnimation(.linear){
-                            currentIndex = max(min(currentIndex + Int(roundIndex), imgBannerModel.count - 1),0)
-                            
+                    
+                    HStack(spacing: spacing) {
+                        ForEach(swipeProducts) { product in
+                            Image(product.lineBannerImage)
+                                .resizable()
+                                .scaledToFit()
+                                .shadow(radius: 5, x: 1, y: 1)
+                                .frame(width: geo.size.width - trailingSpace)
                         }
-                        
-
-                    })
-            )
+                    }
+                    .padding(.horizontal, 16)
+                    .offset(x: (CGFloat(currentIndex) * -width) + dragOffset)
+                }
+                .fixedSize()
+                .modifier(GetHeightModifier())
+                .gesture(
+                    DragGesture()
+                        .updating($dragOffset) { value, state, _ in
+                            print("전" ,state)
+                            state = value.translation.width
+                            print(state)
+                        }
+                        .onEnded { value in
+                            let offsetX = value.translation.width
+                            let progress = -offsetX / width
+                            let roundIndex = progress.rounded()
+                            currentIndex = max(min(currentIndex + Int(roundIndex), swipeProducts.count - 1), 0)
+                        }
+                )
+            }
+            .frame(height: headViewHeight.size.height)
+            .animation(.easeInOut, value: dragOffset == 0)
+            .onPreferenceChange(ContentRectSize.self) { rects in
+                self.headViewHeight = rects
+            }
         }
-        .frame(width: imageWidth,height: imageHeight/3.4)
+    
+    private func getOpactiy(for banner: HeaderBanner, dragOffset: CGFloat, width: CGFloat) -> CGFloat {
+        
+        let getEachBannerDisplayIndex = CGFloat(banner.index - currentIndex)
+        
+        let bannerOffset = getEachBannerDisplayIndex * width
+        
+        let bannerDragOffset = bannerOffset + dragOffset
+        
+        let getOpactiy = (bannerDragOffset/UIScreen.main.bounds.width).magnitude
+
+        return Double(1 - getOpactiy)
     }
 }
 
-struct HeaderView_Previews: PreviewProvider {
+struct HeaderAreaTest_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView()
+        HeaderArea()
+    }
+}
+
+struct HeaderBanner: Identifiable {
+    let id = UUID()
+    var lineBannerImage : String
+    var backgroundImage : String
+    var index : Int
+}
+
+var swipeProducts = [
+    HeaderBanner(lineBannerImage: "ImgLineBanner01", backgroundImage : "ImgBanner01", index : 0 ),
+    HeaderBanner(lineBannerImage: "ImgLineBanner02", backgroundImage : "ImgBanner02", index : 1 ),
+    HeaderBanner(lineBannerImage: "ImgLineBanner03", backgroundImage : "ImgBanner03", index : 2 ),
+    HeaderBanner(lineBannerImage: "ImgLineBanner04", backgroundImage : "ImgBanner04", index : 3 ),
+    HeaderBanner(lineBannerImage: "ImgLineBanner05", backgroundImage : "ImgBanner05", index : 4 ),
+    HeaderBanner(lineBannerImage: "ImgLineBanner06", backgroundImage : "ImgBanner06", index : 5 ),
+    HeaderBanner(lineBannerImage: "ImgLineBanner07", backgroundImage : "ImgBanner07", index : 6 ),
+    HeaderBanner(lineBannerImage: "ImgLineBanner08", backgroundImage : "ImgBanner08", index : 7 ),
+]
+struct ContentRectSize : PreferenceKey {
+    static var defaultValue: CGRect = .zero
+    static func reduce(value: inout CGRect, nextValue: () -> CGRect) {}
+    
+}
+
+struct GetHeightModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .background(GeometryReader {
+                Color.clear.preference(key: ContentRectSize.self,
+                                              value: $0.frame(in: .local))
+            })
     }
 }

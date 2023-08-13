@@ -14,9 +14,11 @@ struct MainView: View {
         GeometryReader { proxy in
             ScrollView {
                 VStack(spacing:0) {
+                    
                     let height = UIScreen.main.bounds.height
+                    
                     //MARK: HEADER
-                    HeaderView()
+                    HeaderArea()
                     
                     //MARK: CENTER
                     CenterViewTab()

@@ -24,5 +24,4 @@ var tab: [TabModel] = [
     .init(tabName: "토", viewName: "SaturdayView"),
     .init(tabName: "일", viewName: "SundayView"),
     .init(tabName: "신작", viewName: "NewdayView"),
-    
 ]
