@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07A7A9782A88FAC800363A56 /* KakaoBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7A9772A88FAC800363A56 /* KakaoBankApp.swift */; };
+		07A7A97A2A88FAC800363A56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7A9792A88FAC800363A56 /* ContentView.swift */; };
+		07A7A97C2A88FAC900363A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A7A97B2A88FAC900363A56 /* Assets.xcassets */; };
+		07A7A9802A88FAC900363A56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A7A97F2A88FAC900363A56 /* Preview Assets.xcassets */; };
+		07A7A98A2A89053A00363A56 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7A9892A89053A00363A56 /* MainView.swift */; };
+		07A7A98D2A890AD500363A56 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7A98C2A890AD500363A56 /* Fonts.swift */; };
+		07A7A98F2A8912BD00363A56 /* HeadArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7A98E2A8912BD00363A56 /* HeadArea.swift */; };
+		07A7A9912A8912CF00363A56 /* BannerArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7A9902A8912CF00363A56 /* BannerArea.swift */; };
+		07A7A9932A891A9200363A56 /* PassBookArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7A9922A891A9200363A56 /* PassBookArea.swift */; };
+		07C038A62A891F9C00CBE150 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C038A52A891F9C00CBE150 /* CustomButton.swift */; };
+		07F90A552A8BC4D700BF3C43 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F90A542A8BC4D700BF3C43 /* SpringAnimation.swift */; };
+		07F90A572A8C579400BF3C43 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F90A562A8C579400BF3C43 /* DetailView.swift */; };
+		07F90A5D2A8C919700BF3C43 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F90A5C2A8C919700BF3C43 /* AppViewModel.swift */; };
+		07F90A5F2A8C949600BF3C43 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F90A5E2A8C949600BF3C43 /* AppModel.swift */; };
+		07F90A612A8CC79400BF3C43 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F90A602A8CC79400BF3C43 /* TabModel.swift */; };
+		07F90A632A8CD9F700BF3C43 /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F90A622A8CD9F700BF3C43 /* ScrollOffsetPreferenceKey.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07A7A9742A88FAC800363A56 /* KakaoBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A7A9772A88FAC800363A56 /* KakaoBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoBankApp.swift; sourceTree = "<group>"; };
+		07A7A9792A88FAC800363A56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07A7A97B2A88FAC900363A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07A7A97D2A88FAC900363A56 /* KakaoBank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KakaoBank.entitlements; sourceTree = "<group>"; };
+		07A7A97F2A88FAC900363A56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07A7A9892A89053A00363A56 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		07A7A98C2A890AD500363A56 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		07A7A98E2A8912BD00363A56 /* HeadArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadArea.swift; sourceTree = "<group>"; };
+		07A7A9902A8912CF00363A56 /* BannerArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerArea.swift; sourceTree = "<group>"; };
+		07A7A9922A891A9200363A56 /* PassBookArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassBookArea.swift; sourceTree = "<group>"; };
+		07C038A52A891F9C00CBE150 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		07F90A542A8BC4D700BF3C43 /* SpringAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		07F90A562A8C579400BF3C43 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		07F90A5C2A8C919700BF3C43 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		07F90A5E2A8C949600BF3C43 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		07F90A602A8CC79400BF3C43 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
+		07F90A622A8CD9F700BF3C43 /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07A7A9712A88FAC800363A56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07A7A96B2A88FAC800363A56 = {
+			isa = PBXGroup;
+			children = (
+				07A7A9762A88FAC800363A56 /* KakaoBank */,
+				07A7A9752A88FAC800363A56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07A7A9752A88FAC800363A56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07A7A9742A88FAC800363A56 /* KakaoBank.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07A7A9762A88FAC800363A56 /* KakaoBank */ = {
+			isa = PBXGroup;
+			children = (
+				07F90A592A8C6DB100BF3C43 /* ViewModel */,
+				07F90A582A8C587E00BF3C43 /* Model */,
+				07A7A98B2A89057000363A56 /* Extension */,
+				07A7A9862A89051500363A56 /* View */,
+				07A7A9772A88FAC800363A56 /* KakaoBankApp.swift */,
+				07A7A9792A88FAC800363A56 /* ContentView.swift */,
+				07A7A97B2A88FAC900363A56 /* Assets.xcassets */,
+				07A7A97D2A88FAC900363A56 /* KakaoBank.entitlements */,
+				07A7A97E2A88FAC900363A56 /* Preview Content */,
+			);
+			path = KakaoBank;
+			sourceTree = "<group>";
+		};
+		07A7A97E2A88FAC900363A56 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				07A7A97F2A88FAC900363A56 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07A7A9862A89051500363A56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07F90A642A8CDC5200BF3C43 /* Main */,
+				07F90A562A8C579400BF3C43 /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07A7A98B2A89057000363A56 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				07A7A98C2A890AD500363A56 /* Fonts.swift */,
+				07C038A52A891F9C00CBE150 /* CustomButton.swift */,
+				07F90A542A8BC4D700BF3C43 /* SpringAnimation.swift */,
+				07F90A622A8CD9F700BF3C43 /* ScrollOffsetPreferenceKey.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		07F90A582A8C587E00BF3C43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07F90A602A8CC79400BF3C43 /* TabModel.swift */,
+				07F90A5E2A8C949600BF3C43 /* AppModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07F90A592A8C6DB100BF3C43 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				07F90A5C2A8C919700BF3C43 /* AppViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		07F90A642A8CDC5200BF3C43 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				07A7A9892A89053A00363A56 /* MainView.swift */,
+				07A7A98E2A8912BD00363A56 /* HeadArea.swift */,
+				07A7A9902A8912CF00363A56 /* BannerArea.swift */,
+				07A7A9922A891A9200363A56 /* PassBookArea.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07A7A9732A88FAC800363A56 /* KakaoBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A7A9832A88FAC900363A56 /* Build configuration list for PBXNativeTarget "KakaoBank" */;
+			buildPhases = (
+				07A7A9702A88FAC800363A56 /* Sources */,
+				07A7A9712A88FAC800363A56 /* Frameworks */,
+				07A7A9722A88FAC800363A56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KakaoBank;
+			productName = KakaoBank;
+			productReference = 07A7A9742A88FAC800363A56 /* KakaoBank.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07A7A96C2A88FAC800363A56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					07A7A9732A88FAC800363A56 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 07A7A96F2A88FAC800363A56 /* Build configuration list for PBXProject "KakaoBank" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07A7A96B2A88FAC800363A56;
+			productRefGroup = 07A7A9752A88FAC800363A56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07A7A9732A88FAC800363A56 /* KakaoBank */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07A7A9722A88FAC800363A56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A7A9802A88FAC900363A56 /* Preview Assets.xcassets in Resources */,
+				07A7A97C2A88FAC900363A56 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07A7A9702A88FAC800363A56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F90A5D2A8C919700BF3C43 /* AppViewModel.swift in Sources */,
+				07A7A9932A891A9200363A56 /* PassBookArea.swift in Sources */,
+				07A7A9912A8912CF00363A56 /* BannerArea.swift in Sources */,
+				07A7A98D2A890AD500363A56 /* Fonts.swift in Sources */,
+				07F90A572A8C579400BF3C43 /* DetailView.swift in Sources */,
+				07A7A97A2A88FAC800363A56 /* ContentView.swift in Sources */,
+				07C038A62A891F9C00CBE150 /* CustomButton.swift in Sources */,
+				07F90A5F2A8C949600BF3C43 /* AppModel.swift in Sources */,
+				07A7A98A2A89053A00363A56 /* MainView.swift in Sources */,
+				07A7A98F2A8912BD00363A56 /* HeadArea.swift in Sources */,
+				07F90A632A8CD9F700BF3C43 /* ScrollOffsetPreferenceKey.swift in Sources */,
+				07A7A9782A88FAC800363A56 /* KakaoBankApp.swift in Sources */,
+				07F90A612A8CC79400BF3C43 /* TabModel.swift in Sources */,
+				07F90A552A8BC4D700BF3C43 /* SpringAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		07A7A9812A88FAC900363A56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07A7A9822A88FAC900363A56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		07A7A9842A88FAC900363A56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KakaoBank/KakaoBank.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KakaoBank/Preview Content\"";
+				DEVELOPMENT_TEAM = WF2V4JB29M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pos.AcademyStudent.Bulmang.KakaoBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07A7A9852A88FAC900363A56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KakaoBank/KakaoBank.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KakaoBank/Preview Content\"";
+				DEVELOPMENT_TEAM = WF2V4JB29M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Pos.AcademyStudent.Bulmang.KakaoBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07A7A96F2A88FAC800363A56 /* Build configuration list for PBXProject "KakaoBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A7A9812A88FAC900363A56 /* Debug */,
+				07A7A9822A88FAC900363A56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07A7A9832A88FAC900363A56 /* Build configuration list for PBXNativeTarget "KakaoBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A7A9842A88FAC900363A56 /* Debug */,
+				07A7A9852A88FAC900363A56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07A7A96C2A88FAC800363A56 /* Project object */;
+}
