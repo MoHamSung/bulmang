@@ -56,7 +56,7 @@
 		07CE17452A8EEFE700D0FDE8 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		07CE17462A8EEFE700D0FDE8 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		07CE17472A8EEFE700D0FDE8 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
-		07CE17512A8EEFF500D0FDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		07CE17512A8EEFF500D0FDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F90A542A8BC4D700BF3C43 /* SpringAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		07F90A562A8C579400BF3C43 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		07F90A5C2A8C919700BF3C43 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
@@ -95,24 +95,13 @@
 		07A7A9762A88FAC800363A56 /* KakaoBank */ = {
 			isa = PBXGroup;
 			children = (
-				07CE17512A8EEFF500D0FDE8 /* Info.plist */,
+				07CA09542A91348600CCD5C4 /* Asset */,
 				07F90A592A8C6DB100BF3C43 /* ViewModel */,
 				07F90A582A8C587E00BF3C43 /* Model */,
 				07A7A98B2A89057000363A56 /* Extension */,
 				07A7A9862A89051500363A56 /* View */,
 				07A7A9772A88FAC800363A56 /* KakaoBankApp.swift */,
 				07A7A9792A88FAC800363A56 /* ContentView.swift */,
-				07A7A97B2A88FAC900363A56 /* Assets.xcassets */,
-				07CE17442A8EEFE700D0FDE8 /* Pretendard-Black.otf */,
-				07CE17472A8EEFE700D0FDE8 /* Pretendard-Bold.otf */,
-				07CE17412A8EEFE700D0FDE8 /* Pretendard-ExtraBold.otf */,
-				07CE17432A8EEFE700D0FDE8 /* Pretendard-ExtraLight.otf */,
-				07CE17402A8EEFE700D0FDE8 /* Pretendard-Light.otf */,
-				07CE17422A8EEFE700D0FDE8 /* Pretendard-Medium.otf */,
-				07CE17452A8EEFE700D0FDE8 /* Pretendard-Regular.otf */,
-				07CE17462A8EEFE700D0FDE8 /* Pretendard-SemiBold.otf */,
-				07CE173F2A8EEFE600D0FDE8 /* Pretendard-Thin.otf */,
-				07A7A97D2A88FAC900363A56 /* KakaoBank.entitlements */,
 				07A7A97E2A88FAC900363A56 /* Preview Content */,
 			);
 			path = KakaoBank;
@@ -144,6 +133,33 @@
 				07F90A622A8CD9F700BF3C43 /* ScrollOffsetPreferenceKey.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		07CA09542A91348600CCD5C4 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				07CA09552A9134B200CCD5C4 /* Fonts */,
+				07A7A97D2A88FAC900363A56 /* KakaoBank.entitlements */,
+				07CE17512A8EEFF500D0FDE8 /* Info.plist */,
+				07A7A97B2A88FAC900363A56 /* Assets.xcassets */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		07CA09552A9134B200CCD5C4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				07CE17442A8EEFE700D0FDE8 /* Pretendard-Black.otf */,
+				07CE17472A8EEFE700D0FDE8 /* Pretendard-Bold.otf */,
+				07CE17412A8EEFE700D0FDE8 /* Pretendard-ExtraBold.otf */,
+				07CE17432A8EEFE700D0FDE8 /* Pretendard-ExtraLight.otf */,
+				07CE17402A8EEFE700D0FDE8 /* Pretendard-Light.otf */,
+				07CE17422A8EEFE700D0FDE8 /* Pretendard-Medium.otf */,
+				07CE17452A8EEFE700D0FDE8 /* Pretendard-Regular.otf */,
+				07CE17462A8EEFE700D0FDE8 /* Pretendard-SemiBold.otf */,
+				07CE173F2A8EEFE600D0FDE8 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		07F90A582A8C587E00BF3C43 /* Model */ = {
