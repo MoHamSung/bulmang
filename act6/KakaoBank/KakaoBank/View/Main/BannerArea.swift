@@ -20,7 +20,7 @@ struct BannerArea: View {
             }
             .padding(.vertical,12)
             .overlay(alignment:.trailing){
-                Image("swift icon")
+                Image("BannerImage")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.vertical,8)
