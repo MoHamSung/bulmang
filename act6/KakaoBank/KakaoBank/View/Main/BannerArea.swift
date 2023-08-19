@@ -10,21 +10,25 @@ import SwiftUI
 struct BannerArea: View {
     var body: some View {
         HStack{
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(spacing: 5) {
                 Text("이번 달까지만 혜택 드려요")
-                    .font(kakaoCaptionMedium)
+                    .font(.kakaoCaptionMedium)
+                    .frame(maxWidth: .infinity,alignment:.leading)
                 Text("랜덤 캐시가 쏙! 신용관리 루틴 챌린지")
-                    .font(kakaoCaptionSemiBold)
+                    .font(.kakaoMoneyBold)
+                    .frame(maxWidth: .infinity,alignment:.leading)
             }
-            .padding(.horizontal,24)
             .padding(.vertical,12)
-            
-            Image("swift icon")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 38)
-            
+            .overlay(alignment:.trailing){
+                Image("swift icon")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.vertical,8)
+            }
+                
+ 
         }
+        .padding(.horizontal,20)
         .frame(maxWidth: .infinity)
         .background(Color("kakaoWhite200"))
         .cornerRadius(20)
